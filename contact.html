@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="data:,">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | Amjad Afridi — Model</title>
+  <meta name="description" content="Booking and inquiry form for model Amjad Afridi.">
+  <meta name="author" content="Amjad Afridi">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="index.html" aria-label="Amjad Afridi — home">A<span>.</span>Afridi</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span></span></button>
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="collaborations.html">Collaborations</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="page-head">
+      <div class="container">
+        <span class="eyebrow">Contact</span>
+        <h1>Booking<br>&amp; inquiries</h1>
+        <p>Tell us about your project. (Sample form — nothing is sent.)</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="form-title">
+      <div class="container contact-grid">
+        <div>
+          <h2 id="form-title" style="margin-bottom:2rem">Send an inquiry</h2>
+          <form class="form" data-validate novalidate>
+            <div class="form-row">
+              <div class="field">
+                <label for="name">Full name</label>
+                <input id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-error">
+                <p class="field-error" id="name-error" aria-live="polite"></p>
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-error">
+                <p class="field-error" id="email-error" aria-live="polite"></p>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="field">
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" type="tel" autocomplete="tel" required aria-describedby="phone-error">
+                <p class="field-error" id="phone-error" aria-live="polite"></p>
+              </div>
+              <div class="field">
+                <label for="service">Project type</label>
+                <select id="service" name="service" required aria-describedby="service-error">
+                  <option value="">Choose one…</option>
+                  <option>Editorial</option>
+                  <option>Runway / show</option>
+                  <option>Campaign</option>
+                  <option>Lookbook / e-commerce</option>
+                  <option>Brand partnership</option>
+                </select>
+                <p class="field-error" id="service-error" aria-live="polite"></p>
+              </div>
+            </div>
+            <div class="field">
+              <label for="date">Preferred date</label>
+              <input id="date" name="date" type="date" required aria-describedby="date-error">
+              <p class="field-error" id="date-error" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="message">Project details</label>
+              <textarea id="message" name="message" required aria-describedby="message-error" placeholder="Brand, concept, location, usage…"></textarea>
+              <p class="field-error" id="message-error" aria-live="polite"></p>
+            </div>
+            <p class="form-note">All fields are required. This is a sample form — no data leaves your browser.</p>
+            <div><button class="btn btn--solid" type="submit">Send inquiry</button></div>
+            <div class="form-success" role="status" tabindex="-1" hidden>
+              <strong>Thank you — inquiry received.</strong>
+              In a live site you would get a reply shortly. (Demo only: nothing was sent.)
+            </div>
+          </form>
+        </div>
+        <aside class="contact-aside" aria-label="Contact details">
+          <div>
+            <h3>Representation <span class="sample-tag" title="Placeholder content — replace with real details">Sample</span></h3>
+            <address>
+              <span data-config="agencies.newYork">Agency name — New York</span><br>
+              <span data-config="agencies.milan">Agency name — Milan</span><br>
+              <span data-config="agencies.london">Agency name — London</span>
+            </address>
+          </div>
+          <div>
+            <h3>Direct</h3>
+            <p><a href="mailto:bookings@amjadafridi.example" data-config-href="links.email" data-config="email">bookings@amjadafridi.example</a><br><a href="tel:+12125550147" data-config-href="links.phone" data-config="phone">+1 212 555 0147</a></p>
+          </div>
+          <div>
+            <h3>Social</h3>
+            <ul class="socials">
+            <li><a href="#" data-config-href="links.instagram" aria-label="Instagram (sample link)">IG</a></li>
+            <li><a href="#" data-config-href="links.tiktok" aria-label="TikTok (sample link)">TT</a></li>
+            <li><a href="mailto:bookings@amjadafridi.example" data-config-href="links.email" aria-label="Email">Mail</a></li>
+          </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section--surface" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="section-head"><div><span class="eyebrow">FAQ</span><h2 id="faq-title">Good to know</h2></div></div>
+        <div class="accordion">
+          <div class="accordion-item">
+            <h3><button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="faq-1" id="faq-btn-1">How do I book Amjad for a shoot or show?</button></h3>
+            <div class="accordion-panel" id="faq-1" role="region" aria-labelledby="faq-btn-1" hidden><p>Send the inquiry form with your dates, usage and location. You will get availability and a quote in reply.</p></div>
+          </div>
+          <div class="accordion-item">
+            <h3><button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="faq-2" id="faq-btn-2">Does he travel for bookings?</button></h3>
+            <div class="accordion-panel" id="faq-2" role="region" aria-labelledby="faq-btn-2" hidden><p>Yes. Travel and accommodation are quoted separately depending on the location.</p></div>
+          </div>
+          <div class="accordion-item">
+            <h3><button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="faq-3" id="faq-btn-3">Can we request digitals or a comp card?</button></h3>
+            <div class="accordion-panel" id="faq-3" role="region" aria-labelledby="faq-btn-3" hidden><p>Yes — mention it in your message and current digitals and a PDF comp card will be sent with the reply.</p></div>
+          </div>
+          <div class="accordion-item">
+            <h3><button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="faq-4" id="faq-btn-4">What usage rights are included?</button></h3>
+            <div class="accordion-panel" id="faq-4" role="region" aria-labelledby="faq-btn-4" hidden><p>Rates depend on territory, media and duration. Editorial is typically quoted at a day rate; campaign usage is quoted per market.</p></div>
+          </div>
+          <div class="accordion-item">
+            <h3><button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="faq-5" id="faq-btn-5">Is he available for brand partnerships?</button></h3>
+            <div class="accordion-panel" id="faq-5" role="region" aria-labelledby="faq-btn-5" hidden><p>Yes, for a limited number of long-term partnerships each year.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="logo" href="index.html">A<span>.</span>Afridi</a>
+          <p><span data-config="name">Amjad Afridi</span> — <span data-config="tagline">Editorial, campaign &amp; runway model</span>. Available for bookings in <span data-config="cities">New York · Milan · London · Dubai</span>.</p>
+        </div>
+        <div>
+          <h2>Pages</h2>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="collaborations.html">Collaborations</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Follow</h2>
+          <ul class="socials">
+            <li><a href="#" data-config-href="links.instagram" aria-label="Instagram (sample link)">IG</a></li>
+            <li><a href="#" data-config-href="links.tiktok" aria-label="TikTok (sample link)">TT</a></li>
+            <li><a href="mailto:bookings@amjadafridi.example" data-config-href="links.email" aria-label="Email">Mail</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span data-year>2026</span> <span data-config="name">Amjad Afridi</span>. <span class="sample-note">Sample website for demonstration purposes.</span></p>
+        <p><a href="CREDITS.md">Photo credits</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
