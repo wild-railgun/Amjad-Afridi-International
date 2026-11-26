@@ -7,7 +7,7 @@
  *  2. Sticky navbar on scroll  7. Lightbox (arrows / Esc / focus return)
  *  3. Mobile menu              8. Contact form validation
  *  4. Scroll-reveal            9. FAQ accordion
- *  5. Testimonials slider     10. Stat counters, image fallbacks, footer year
+ *  5. Testimonials slider     10. Stat counters, image fallbacks, videos, footer year
  */
 (function () {
   'use strict';
@@ -324,6 +324,21 @@
     });
   }
 
+  /* 10d. Videos ------------------------------------------------------
+   * Autoplaying (muted, looping) videos only play while on screen, and
+   * never autoplay for visitors who ask for reduced motion.             */
+  function initVideos() {
+    const vids = $$('video[autoplay]');
+    if (!vids.length) return;
+    if (reduceMotion) { vids.forEach((v) => { v.removeAttribute('autoplay'); v.pause(); }); return; }
+    if (!('IntersectionObserver' in window)) return;
+    const io = new IntersectionObserver((entries) => entries.forEach((e) => {
+      const v = e.target;
+      if (e.isIntersecting) { v.play().catch(() => {}); } else if (!v.paused) { v.pause(); }
+    }), { threshold: 0.25 });
+    vids.forEach((v) => io.observe(v));
+  }
+
   /* 10c. Footer year ------------------------------------------------ */
   function initYear() {
     $$('[data-year]').forEach((el) => { el.textContent = new Date().getFullYear(); });
@@ -341,6 +356,7 @@
     initForm();
     initAccordion();
     initCounters();
+    initVideos();
     initYear();
   });
 })();
